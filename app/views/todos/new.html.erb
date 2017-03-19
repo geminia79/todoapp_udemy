@@ -15,7 +15,7 @@ corresponding action:
  submits to update - hits the database with patch or gives an error
 
  -->
-<% if @todo.errors.any? %> <!--todo8--> 
+<% if @todo.errors.any? %> <!--todo8-->
 <h2> The following errors prevented the todo from being saved</h2>
 <ul>
   <%@todo.errors.full_messages.each do |msg| %>
@@ -42,3 +42,5 @@ corresponding action:
   <%= f.submit %> <!-- you need to create a action 'create' in TodosController, cause if you click now, it will show error, now go to todos_controller.erb -->
 </p>
 <% end %>
+
+<%= link_to "Back to todos listing", todos_path %> <!--index5-->  

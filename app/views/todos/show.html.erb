@@ -1,9 +1,13 @@
 <h1> Showing a Todo </h1>  <!--todo10-->
 
-<p>  <!-- todo 12 --> 
+<p>  <!-- todo 12 -->
   name: <%= @todo.name %>
 </p>
 
 <p>
   description: <%= @todo.description %>
 </p>
+
+<!--index4 this is to create a edit and show next to the list, now go to new.html.erb,--> 
+<%= link_to "Edit this todo", edit_todo_path(@todo) %> |
+<%= link_to "Back to todos listing", todos_path %>

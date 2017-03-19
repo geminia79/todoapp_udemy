@@ -4,7 +4,7 @@ git config --global user.name "Alex Chew"
 
 git config --global user.email "tradlexis@gmail.com"
 
-goto github create a new repository 1st 
+goto github create a new repository 1st
 
 git init
 
@@ -24,3 +24,8 @@ git push -u origin master
 Username for 'https://github.com': tradlex@gmail.com
 
 line 19 and 21, go to github
+
+if u make changes -
+
+git add -A
+git commit -m "add edit action"

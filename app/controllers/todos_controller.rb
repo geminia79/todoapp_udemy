@@ -36,6 +36,14 @@ end
     end
   end
 
+  def index  #index1- go to rails routes in terminal, look for this todos GET    /todos(.:format)          todos#index, always remember this, in TodosController, after create a def index method u must always create a index.html.erb
+    # remember this @todos is just a variable, it can be anyname,
+    #this is to create a List of todos created #index1 , goto to index.html.erb
+    @todos = Todo.all
+  end
+
+
+
 
     private # only available to this controller
 

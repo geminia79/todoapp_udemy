@@ -1,0 +1,22 @@
+<h1> Listing all Todos </h1> <!--index2-->
+
+<p>
+  <%= link_to "Create a Todo", new_todo_path %> <!-- this is to create a new path back to todo page ,why new todo_path, check the rails routes new_todo GET    /todos/new(.:format)      todos#new -->
+</p>
+
+<table> <!-- index 3, create a index table -->
+  <tr>
+    <th> Name </th>
+    <th> Description </th>
+  </tr>
+
+  <% @todos.each do |todo| %> <!--now loop through all display that we had, get it connected to todos -->
+   <tr>
+     <td><%= todo.name %> </td>
+     <td><%= todo.description %> </td>
+     <td><%= link_to "Edit", edit_todo_path(todo) %></td> <!-- to create a Edit link -->
+     <td><%= link_to "Show", todo_path(todo) %></td> <!-- to create a Show link , but once  click show, it doesnt have a  link to go back-->
+<!-- now go to show.html.erb --> 
+   </tr>
+   <%end%>
+</table>
