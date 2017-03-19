@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todoappo</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% flash.each do |name, msg| %> <!--flash2, display the message that we already assigned with the variable |msg| -->
+    <ul>
+      <li><%= msg %></li> <!--msg is defined at new.html.erb --> 
+      <ul>
+
+        <%end%>
+    <%= yield %>
+  </body>
+</html>

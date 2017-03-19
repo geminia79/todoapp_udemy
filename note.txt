@@ -1,0 +1,1 @@
+1st establish a route at routes.rb, the root routes should send this request to the application controller with Hello action 'application#hello' 
