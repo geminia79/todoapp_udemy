@@ -17,8 +17,23 @@ class TodosController < ApplicationController # D1 to make a new todoapp, create
 end
 
   def show #todo9 , create a file call show.html.erb at view/todos
-    @todo = Todo.find(params[:id]) #todo11, they can grab that id and show it.. now go to show.html.erb 
+    @todo = Todo.find(params[:id]) #todo11, they can grab that id and show it.. now go to show.html.erb
 
+  end
+
+  def edit # todo_edit1 , goto views/todos create a edit.html.erb
+    @todo = Todo.find(params[:id])
+  end
+
+  def update #todo_edit4
+    @todo = Todo.find(params[:id])
+    if @todo.update(todo_params)
+      flash[:notice] = "Todos was successfully updated"
+      redirect_to todo_path(@todo) #send it back to todo that just updated
+    else
+      render 'edit' #if not , then go back to edit.html.erb
+
+    end
   end
 
 

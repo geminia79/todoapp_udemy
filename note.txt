@@ -1,1 +1,26 @@
-1st establish a route at routes.rb, the root routes should send this request to the application controller with Hello action 'application#hello' 
+1st establish a route at routes.rb, the root routes should send this request to the application controller with Hello action 'application#hello'
+
+git config --global user.name "Alex Chew"
+
+git config --global user.email "tradlexis@gmail.com"
+
+goto github create a new repository 1st 
+
+git init
+
+git add -A
+
+git status
+
+git commit -m "Initial commit"
+
+git status
+
+cat  ~/.ssh/id_rsa.pub # only if u're 1st time user
+
+git remote add origin https://github.com/geminia79/todoapp_udemy.git
+
+git push -u origin master
+Username for 'https://github.com': tradlex@gmail.com
+
+line 19 and 21, go to github
