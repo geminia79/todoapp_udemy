@@ -16,7 +16,11 @@
      <td><%= todo.description %> </td>
      <td><%= link_to "Edit", edit_todo_path(todo) %></td> <!-- to create a Edit link -->
      <td><%= link_to "Show", todo_path(todo) %></td> <!-- to create a Show link , but once  click show, it doesnt have a  link to go back-->
-<!-- now go to show.html.erb --> 
+<!-- now go to show.html.erb -->
+
+  <!--Delete1-->
+      <td><%= link_to "Delete", todo_path(todo), method: :delete, data: {confirm: "Are you sure?"} %> </td>    <!-- once u write this, go to rails routes, you will see DELETE /todos/:id(.:format)      todos#destroy, means it must go to /todos/ -->
    </tr>
    <%end%>
 </table>
+<!-- method: :delete => we must specified is a delete method, now we must add a Destroy controller, now go to todos_controller 
