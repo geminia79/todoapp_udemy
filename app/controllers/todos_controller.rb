@@ -1,6 +1,12 @@
 class TodosController < ApplicationController # D1 to make a new todoapp, create a todos_controller.rb in controllers folder. Always remember this, 1 controller and 1 action.
 # cause you're creatin a /todos/new Url. once a controller is created, create a action called 'new' as below. once they found a new action, they will need a viewer.
 
+
+#if you want to partial, cause all Method :edit, update, show, destroy have this line =todo = Todo.find(params[:id]), if you want to to Partial
+#uncomment the below before_action, then go down after private to 'def set_todo' uncomment it
+#before_action :set_todo, only: [:edit, :update, :show, :destroy]
+
+
     def new #D2
     @todo = Todo.new   #todo3, we need to initiate the Todo action, refer to notes at new.html.erb
   end
@@ -52,6 +58,12 @@ end
 
 
     private # only available to this controller
+    # you can do partial at controller too, look at all the method above, they all have todo = Todo.find(params[:id]), you can delete them and
+    # place them this way, delete all of it
+
+    #def set_todo
+    #todo = Todo.find(params[:id]) remember to put back @ at the front.
+  #end
 
     def todo_params # todo4 , this is to allowing application to receive from the web.
       params.require(:todo).permit(:name, :description)

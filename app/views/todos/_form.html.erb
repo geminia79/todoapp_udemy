@@ -1,0 +1,32 @@
+
+<!-- partial 3 = this is cut and paste from edit.html.erb for partial --> 
+<!-- todo_edit3 - copy and paste from new.htm.erb and paste it here , go back to todos_controller.rb -->
+<% if @todo.errors.any? %>
+<h2> The following errors prevented the todo from being saved</h2>
+<ul>
+  <%@todo.errors.full_messages.each do |msg| %>
+  <li><%= msg %> </li>
+  <%end%>
+
+
+</ul>
+<%end%>
+<%= form_for @todo do |f| %> <!-- todo2 this is to create a form with form_for that link to @todo, you will see |f| cause they're assigned to f,
+  example like f.label,  go to todos_controller.rb  -->
+<p>
+
+  <%= f.label :name %> <br>  <!-- this create name and form -->
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :description %> <br> <!-- this create description and form -->
+  <%= f.text_area :description %>
+</p>
+
+<p>
+  <%= f.submit %> <!-- you need to create a action 'create' in TodosController, cause if you click now, it will show error, now go to todos_controller.erb -->
+</p>
+<% end %>
+
+<% link_to "Back to todos listing", todos_path %>

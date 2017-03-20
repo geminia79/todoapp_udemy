@@ -8,13 +8,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <% flash.each do |name, msg| %> <!--flash2, display the message that we already assigned with the variable |msg| -->
-    <ul>
-      <li><%= msg %></li> <!--msg is defined at new.html.erb --> 
-      <ul>
+  <body>  <!--partial 2, when you cut the code and paste it at _messages.html.erb, you must place
+    render as below, render 'layouts/messages'; messages is _message.html.erb --> 
+     <%= render 'layouts/messages' %>
 
-        <%end%>
     <%= yield %>
   </body>
 </html>
